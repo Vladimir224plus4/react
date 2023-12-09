@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Hello World</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- Добавим Babel который отвечает за трансформацию JSX в JS -->
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/babel">
+      // type - показывает что необходимо выполнить транформацию кода JSX
+      const helloWorld = <h1>Hello from React</h1>; // код JSX
+      const container = document.getElementById('app');
+      const root = ReactDOM.createRoot(container);
+      root.render(helloWorld);
+    </script>
+  </body>
+</html>

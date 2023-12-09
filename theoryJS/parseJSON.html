@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Парсим JSON</title>
+  </head>
+  <body>
+    <script>
+      // let json1 = '[12, 45, 20, 135, 7]'; // массив
+      // console.log(json1);
+
+      // let json2 = '{"firstName":"Иванов","lastName":"Иван","age": 20}'; // простой объект
+
+      // let data2 = JSON.parse(json2); //метод parse объекта JSON распарсил строку json2
+      // //в объект data2 с набором атрибутов
+      // console.log(data2);
+      // console.log(data2.age);
+      // console.log(data2.firstName);
+      // console.log(data2.lastName);
+
+    //   let obj = {
+    //     firstName: 'Петров',
+    //     lastName: 'Петр',
+    //     age: 21,
+    //   };
+    //   console.log(obj);
+
+    //   let json3 = JSON.stringify(obj); //метод stringify объекта JSON вернул объект obj
+    //   //в строку json3
+    //   console.log(json3);
+
+    //   // объект со сложной структурой
+    //   let json4 = `{    
+    //     "book": {
+    //         "number1":{
+    //             "author":"Достоевский",
+    //             "title": "Идиот"
+    //         },
+    //         "number2":{
+    //             "author":"Чехов",
+    //             "title": "Палата № 6"
+    //         }
+    //     }
+    // }`;
+    //   let data4 = JSON.parse(json4);
+    //   console.log(data4);
+    //   console.log(data4.book.number2.title);
+
+      // самостоятельно: на сайте https://filesamples.com/formats/json скачать файл sample3.json, содержимое скопировать в свой рабочий файл,
+      //  вывести в консоль значения двух простых свойств и двух составных
+
+      let json4 = `
+      {
+      "firstName": "Joe",
+      "lastName": "Jackson",
+      "gender": "male",
+      "age": 28,
+      "address": {
+          "streetAddress": "101",
+          "city": "San Diego",
+          "state": "CA"
+      },
+      "phoneNumbers": [
+          { "type": "home", "number": "7349282382" },
+          { "type": "home", "number": "1001-1001" },
+          { "type": "home", "number": "7349" }
+      ]
+    }`
+    let data4 = JSON.parse(json4);
+      console.log(data4);
+      console.log(data4.address.state);
+      console.log(data4.address.city);
+      console.log(data4.phoneNumbers[1].number);
+      console.log(data4.phoneNumbers[0].number);
+
+
+
+    </script>
+  </body>
+</html>
